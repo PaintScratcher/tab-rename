@@ -1,0 +1,13 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.title':
+      'Rename Tab': 'tab-rename:open'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Rename Tab', 'command': 'tab-rename:open' 
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "tab-rename",
+  "main": "./lib/tab-rename",
+  "version": "0.0.0",
+  "description": "Rename the currently active tab",
+  "activationEvents": ["tab-rename:open"],
+  "repository": "https://github.com/PaintScratcher/tab-rename",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
