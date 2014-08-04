@@ -13,6 +13,8 @@ class tabRenameView extends View
   initialize: (serializeState) ->
     atom.workspaceView.command "tab-rename:open", => @open()
     atom.workspaceView.command "tab-rename:rename", => @rename()
+    atom.workspaceView.command "tab-rename:renameKeyboard", => @renameKeyboard()
+    atom.workspaceView.command "tab-rename:renameClick", => @renameClick()
 
   # Tear down any state and detach
   destroy: ->
@@ -27,10 +29,17 @@ class tabRenameView extends View
     @nameEditor.focus()
     @handleEvents()
 
+  renameClick: ->
+    @elementName = document.querySelector('.tab.sortable.right-clicked').querySelector('.title')
+    @open()
+
+
+  renameKeyboard: ->
+    @elementName = document.querySelector('.tab.active').querySelector('.title')
+    @open()
+
   rename: ->
-    name = atom.workspace.getActivePane().getActiveItem().getTitle()
-    test = document.querySelector('.title[data-name="'+name+'"]')
-    test.innerText=@nameEditor.getText()
+    @elementName.innerText = @nameEditor.getText()
     @destroy()
 
    handleEvents: ->

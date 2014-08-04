@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Rename the currently active tab",
   "activationEvents": [
-    "tab-rename:open"
+    "tab-rename:renameClick",
+    "tab-rename:renameKeyboard"
   ],
   "repository": "https://github.com/PaintScratcher/tab-rename",
   "license": "MIT",
