@@ -30,12 +30,12 @@ class tabRenameView extends View
     @handleEvents()
 
   renameClick: ->
-    @elementName = document.querySelector('.tab.sortable.right-clicked').querySelector('.title')
+    @elementName = atom.workspaceView.getActivePane()[0].querySelector('.tab.sortable.right-clicked').querySelector('.title')
     @open()
 
 
   renameKeyboard: ->
-    @elementName = document.querySelector('.tab.active').querySelector('.title')
+    @elementName = atom.workspaceView.getActivePane()[0].querySelector('.tab.active').querySelector('.title')
     @open()
 
   rename: ->
