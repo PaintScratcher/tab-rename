@@ -3,10 +3,10 @@
   "main": "./lib/tab-rename",
   "version": "1.2.0",
   "description": "Rename a tab",
-  "activationCommands": {
+  "activationCommands": [{
     "atom-workspace": "tab-rename:renameClick",
     "atom-workspace": "tab-rename:renameKeyboard"
-  },
+  }],
   "repository": "https://github.com/PaintScratcher/tab-rename",
   "license": "MIT",
   "engines": {
