@@ -22,20 +22,18 @@ module.exports = TabRename =
 
   renameClick: ->
     @show()
-    @titleElement = @getTitleElement('.tab.right-clicked > .title')
+    workspaceView = atom.views.getView(atom.workspace)
+    @titleElement = workspaceView.querySelector('.tab.right-clicked > .title')
 
   renameKeyboard: ->
     @show()
-    @titleElement = @getTitleElement('.tab.active > .title')
+    activePaneView = atom.views.getView(atom.workspace.getActivePane())
+    @titleElement = activePaneView.querySelector('.tab.active > .title')
 
   show: ->
     @modalPanel.show()
     @tabRenameView.nameEditor.setText("")
     @tabRenameView.nameEditor.focus()
-
-  getTitleElement: (locator) ->
-    paneView = atom.views.getView(atom.workspace)
-    paneView.querySelector(locator)
 
   rename: ->
     input = @tabRenameView.nameEditor.getText()
