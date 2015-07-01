@@ -2,15 +2,13 @@
   "name": "tab-rename",
   "main": "./lib/tab-rename",
   "version": "1.2.0",
-  "description": "Rename the currently active tab",
-  "activationEvents": [
-    "tab-rename:renameClick",
-    "tab-rename:renameKeyboard"
-  ],
+  "description": "Rename a tab",
   "repository": "https://github.com/PaintScratcher/tab-rename",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.174.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3"
+  }
 }
